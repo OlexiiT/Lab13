@@ -24,6 +24,8 @@ public class DataProcessor {
             System.out.println(student.getName() + " " + student.getSurname() + " added to " + faculty.getName());
         } catch (FacultyOverflowException e) {
             System.out.println(e.getMessage());
+        } finally {
+            return attempts += 1;
         }
     }
 
