@@ -14,27 +14,30 @@ public class Lab_13 {
         kpi.addFaculty(ipt);
 
         kpi.addFaculty(fict);
+        
+        int attempts = 0;
 
         Student student1 = new Student("Ivan", "Ivanov", 1, 98);
-        DataProcessor.addStudent(fict, student1);
+        attempts = DataProcessor.addStudent(fict, student1, attempts);
         Student student2 = new Student("Maksym", "Krut", 2, 100);
-        DataProcessor.addStudent(fict, student2);
+        attempts = DataProcessor.addStudent(fict, student2, attempts);
 
         Student student3 = new Student("Oleksii", "Tymoshenko", 3, 90);
-        DataProcessor.addStudent(fict, student3);
+        attempts = DataProcessor.addStudent(fict, student3, attempts);
         Student student4 = new Student("Oleksii", "Galuga", 4, 95.5);
-        DataProcessor.addStudent(iasa, student4);
+        attempts = DataProcessor.addStudent(iasa, student4, attempts);
 
         Student student5 = new Student("Maksym", "Krut", 3, 99);
-        DataProcessor.addStudent(iasa, student5);
+        attempts = DataProcessor.addStudent(iasa, student5, attempts);
         Student student6 = new Student("Oleksii", "Galuga", 4, 95.5);
-        DataProcessor.addStudent(iasa, student6);
+        attempts = DataProcessor.addStudent(iasa, student6, attempts);
 
         Student student7 = new Student("Krotov", "Anton", 5, 74);
-        DataProcessor.addStudent(iasa, student7);
+        attempts = DataProcessor.addStudent(iasa, student7, attempts);
         Student student8 = new Student("Baginsky", "Dmytro", 6, 65.8);
-        DataProcessor.addStudent(ipt, student8);
+        attempts = DataProcessor.addStudent(ipt, student8, attempts);
         
+        System.out.println("attempts: " + attempts);
         System.out.println();
 
         DataProcessor.findAmountOfStudents(kpi);
